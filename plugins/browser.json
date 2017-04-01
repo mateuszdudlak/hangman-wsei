@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "wsei.project.hangman"
+        }
+    }
+}
