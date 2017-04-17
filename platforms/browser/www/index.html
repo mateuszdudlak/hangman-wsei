@@ -1,46 +1,164 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<title> Hangman Game - WSEI Project </title>
+<meta charset="utf-8"/>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+<title> Hangman </title>
+<link rel="stylesheet" href="themes/BPieczara.css" />
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
     
 
     
+    <script type="text/javascript" src="cordova.js"></script>
+    
 </head>
     
 <body>
     
-  
+  <div data-role="page" id="p1" data-theme="d">
+    
+    <div data-role="header">
+    <div data-role="navbar">
+        <ul>
+        
+        <li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
+            <li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a></li>
+        <li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a>  </li>
+        
+        
+        
+        </ul>
+        
+        
+        
+        </div>
+    
+    <h1> WELCOME !</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <h1><center>Please log in !</center> </h1>
+        
+
+        
+        
+        
+        
+        
+        
+        
+        <div data-role="collapsible">
+            
+        <h1>Rules of the game</h1>
+            <p>Here go the rules of the hangman game</p>
+        
+        
+        
+        
+        </div>
+        
+        <div data-role="collapsible">
+            
+        <h1>About</h1>
+            <p>This application has been produced by .....</p>
+        
+      
+        
+        
+        </div>
+        
+          
+    </div>
+    
+    <div data-role="footer">
+        <h2>&copy; WSEI 2017</h2>
+    </div>
+
+       
+    </div>
     
      
 <div data-role="page" id="container" data-theme="d">
     
-     
-    
-    
-    <div id="frasePad"></div>
-    
-    <h1><center>Welcome to our Hangman Game !</center> </h1>
-    
+     <div data-role="navbar">
+        <ul>
         
-    <div id="hangman"></div>
+        <li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
+         <li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a>
+        <li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a> 
+            </li></ul>
+           
+        </div>
+    
+    <div data-role="main" class="ui-content">
+    
+    <div id="frasePad">
+        
+    </div>
+    <div id="hangman">
+        
+    
+    </div>
         
     <div id="letters"></div>
     <div style="clear:both;"></div>
     
+    </div>
+    
+    
+   <div data-role="footer">
+        
+    </div> 
+    
+    
+</div>
+    
     
 
     
+  <div data-role="page" id="p3" data-theme="d">
     
-
+    <div data-role="header">
+    <div data-role="navbar">
+        <ul>
+        
+        <li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
+         <li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a>
+        <li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a>      
+            </li>
+        </ul>
+    
+        </div>
+    
+    <h1> PLEASE RATE OUR APPLICATION </h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <h1><center>Please rate this application</center> </h1>
+        
+        <form>
+        <label for="improve"><h2>Please suggest can we can do better</h2></label>
+        <textarea name="improvements" id="improve" placeholder="Make an improvement suggestion"></textarea>
+        <label for="rating"><h2>Please rate this application using a 1-10 scale</h2></label>
+        <input type="range" min="0" max ="10" name="rating" id="rating"/>
+        <input type="submit" value="Rate our application !"/>
+            <br></br>
+        </form>
+        
+        
+        
+     
+    </div>
     
     <div data-role="footer">
-    <h2>&copy; Bartosz Pieczara, Mateusz Dudłak 2017</h2>
+        <h2>&copy; WSEI 2017</h2>
     </div>
-  </div>
+  
+    </div>
+    
 </body>
 
 

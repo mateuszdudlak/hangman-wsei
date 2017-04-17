@@ -1,10 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-<meta charset="utf-8"/>
-	
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+<meta charset="utf-8">
 <title> Hangman </title>
 <link rel="stylesheet" href="themes/BPieczara.css" />
   <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -12,10 +9,10 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
     
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-    
-    <script type="text/javascript" src="cordova.js"></script>
-    
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="hangman.js"></script>
 </head>
     
 <body>
@@ -27,8 +24,10 @@
         <ul>
         
         <li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
-            <li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a></li>
-        <li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a>  </li>
+         <li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a>
+        <li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a> 
+            
+            </li>
         
         
         
@@ -38,12 +37,20 @@
         
         </div>
     
-    <h1> WELCOME !</h1>
+    <h1> WELCOME TO OUR HANGMAN GAME</h1>
     </div>
     <div data-role="main" class="ui-content">
         <h1><center>Please log in !</center> </h1>
         
-
+        <form>
+        <label><h2>Please input your name and nickname</h2></label>
+        <input type="text" id="nameField"/>
+        <input type="text" id="nickNameField"/>
+        <input type="button" value="Log in" id="button" onclick="saveCrap()"/>
+            <br></br>
+        
+        
+        </form>
         
         
         
@@ -75,7 +82,7 @@
     </div>
     
     <div data-role="footer">
-        <h2>&copy; WSEI 2017</h2>
+        <h2>&copy; Bartosz Pieczara, Mateusz Dudłak 2017</h2>
     </div>
 
        
@@ -90,35 +97,42 @@
         <li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
          <li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a>
         <li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a> 
-            </li></ul>
-           
+            </li>
+        
+        
+        
+        </ul>
+        
+        
+        
         </div>
     
-    <div data-role="main" class="ui-content">
+    
     
     <div id="frasePad">
+    
+
+    
         
     </div>
+    
+    
+    
+        
     <div id="hangman">
         
+    <img src="img/s0.jpg" alt=""/> 
     
     </div>
         
     <div id="letters"></div>
     <div style="clear:both;"></div>
     
-    </div>
-    
-    
-   <div data-role="footer">
-        
-    </div> 
-    
     
 </div>
     
     
-
+<body>
     
   <div data-role="page" id="p3" data-theme="d">
     
@@ -154,7 +168,7 @@
     </div>
     
     <div data-role="footer">
-        <h2>&copy; WSEI 2017</h2>
+        <h2>&copy; Bartosz Pieczara, Mateusz Dudłak 2017</h2>
     </div>
   
     </div>
