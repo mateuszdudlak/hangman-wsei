@@ -1,11 +1,9 @@
-var frase1 = "";
 var one="";
 var two = "";
-var ourData;
-var chosenFrase = "";
-   
 
 
+
+    
 
 
 function saveCrap(){
@@ -19,8 +17,8 @@ function saveCrap(){
 }
 
 function display(one,two) {
-one = localStorage.getItem(one);
-two = localStorage.getItem(two);
+    one = localStorage.getItem(one);
+   two = localStorage.getItem(two);
    
 }
 
@@ -33,45 +31,28 @@ two = localStorage.getItem(two);
 
 
 
-
+var frasesArray = new Array(2);
+frasesArray[0] = "The squeaky wheel gets the grease";
+frasesArray[1] = "The pen is mightier than the sword";
 
 
 function choosing()
 {
-var chosenNumber = Math.round(Math.random() * 4);
-JSONConnecting(chosenNumber);
+var chosenNumber = Math.round(Math.random() * frasesArray.length);
+chosenFrase = frasesArray[chosenNumber];
 }
 
 choosing();
 
 
-
-function JSONConnecting (chosenNumber)
-{
-var ourRequest = new XMLHttpRequest();
-ourRequest.open('GET', 'http://hangman.c0.pl/dupa.txt');
-ourRequest.onload = function() {
-if (ourRequest.status >= 200 && ourRequest.status < 400) {
-      ourData= ourRequest.responseText;
-chosenFrase = ourData[chosenNumber];
-    } else {
-      console.log("We connected to the server, but it returned an error.");
-    }
-};
-ourRequest.send();
-}
-
-
-
-
 var frase = chosenFrase;
 
-//frase = frase.toUpperCase();
+frase = frase.toUpperCase();
 
 var fraseLength = frase.length;
 var numberOfFailures = 0;
 
-
+var frase1 = "";
 
 for(i=0; i<fraseLength; i++)
 {
@@ -149,12 +130,23 @@ function begin()
 
 String.prototype.setSign= function(place,sign)
 {
-   if(place>this.length-1) return this.toString();
+   if(place>this.lenth-1) return this.toString();
     else return this.substr(0,place) + sign + this.substr(place+1);
     
 }
 
-
+function hinting () {
+      
+var ourRequest = new XMLHttpRequest();
+ourRequest.open('GET', 'http://hangman.c0.pl/test.json');
+ourRequest.onload = function() {
+    var ourData = JSON.parse(ourRequest.responseText);
+    var chosenNumber = Math.round(Math.random() * 3);
+    alert(ourData[chosenNumber].name);
+};
+ourRequest.send();   
+      
+}
 
 
 function checkIfClicked(numb)
