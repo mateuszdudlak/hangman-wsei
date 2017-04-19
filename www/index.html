@@ -4,176 +4,146 @@
 <meta charset="utf-8">
 <title> Hangman </title>
 <link rel="stylesheet" href="themes/BPieczara.css" />
-  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
-    
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-    <script src="hangman.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<script src="hangman.js"></script>
 </head>
-    
+
 <body>
-    
-  <div data-role="page" id="p1" data-theme="d">
-    
-    <div data-role="header">
-    <div data-role="navbar">
-        <ul>
-        
-        <li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
-         <li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a>
-        <li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a> 
-            
-            </li>
-        
-        
-        
-        </ul>
-        
-        
-        
-        </div>
-    
-    <h1> WELCOME TO OUR HANGMAN GAME</h1>
-    </div>
-    <div data-role="main" class="ui-content">
-        <h1><center>Please log in !</center> </h1>
-        
-        <form>
-        <label><h2>Please input your name and nickname</h2></label>
-        <input type="text" id="nameField"/>
-        <input type="text" id="nickNameField"/>
-        <input type="button" value="Log in" id="button" onclick="saveCrap()"/>
-            <input type="button" value="Get a hint ! " id="button" onclick="hinting()"/>
-            <br></br>
-        
-        
-        </form>
-        
-        
-        
-        
-        
-        
-        
-        <div data-role="collapsible">
-            
-        <h1>Rules of the game</h1>
-            <p>Here go the rules of the hangman game</p>
-        
-        
-        
-        
-        </div>
-        
-        <div data-role="collapsible">
-            
-        <h1>About</h1>
-            <p>This application has been produced by .....</p>
-        
-      
-        
-        
-        </div>
-        
-          
-    </div>
-    
-    <div data-role="footer">
-        <h2>&copy; Bartosz Pieczara, Mateusz Dudłak 2017</h2>
-    </div>
 
-       
-    </div>
-    
-     
-<div data-role="page" id="container" data-theme="d">
-    
-     <div data-role="navbar">
-        <ul>
-        
-        <li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
-         <li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a>
-        <li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a> 
-            </li>
-        
-        
-        
-        </ul>
-        
-        
-        
-        </div>
-    
-    
-    
-    <div id="frasePad">
-    
+<div data-role="page" id="p1" data-theme="d">
 
-    
-        
-    </div>
-    
-    
-    
-        
-    <div id="hangman">
-        
-    <img src="img/s0.jpg" alt=""/> 
-    
-    </div>
-        
-    <div id="letters"></div>
-    <div style="clear:both;"></div>
-    
-    
+<div data-role="header">
+<div data-role="navbar">
+<ul>
+
+<li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
+<li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a>
+<li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a> 
+
+</li>
+
+</ul>
+
 </div>
-    
-    
+
+<h1> WELCOME TO OUR GAME !</h1>
+</div>
+<div data-role="main" class="ui-content">
+<h1><center>Please log in !</center> </h1>
+
+<form>
+<label><h2>Please input your name and nickname</h2></label>
+<input type="text" id="nameField"/>
+<input type="text" id="nickNameField"/>
+<input type="button" value="Log in" id="button" onclick="saveCrap()"/>
+<input type="button" value="Get a hint ! " id="button" onclick="hinting()"/>
+<br></br>
+
+</form>
+
+<div data-role="collapsible">
+
+<h1>Rules of the game</h1>
+<p>The present application is a hangman game where players try to guess one of randomly selected English proverbs. The letters and spaces that the proverb consists of are visible aboce the pictures.
+The progress of the game is reflected by pictures showing an unpleasant situation being replaced every time that a letter that does not appear in the proverb is clicked on the keyboard below.
+When one of the letters that the frase consists of is clicked, all the spots where it appears are displayed at once. If you hit a wrong letter 9 times, the games will end and you will witness an unpleasant scene on the picture board :P The results are measured by the number of wrong letters clicked before guessing the proverb. Enjoy ! 
+    </p>
+
+</div>
+
+<div data-role="collapsible">
+
+<h1>About</h1>
+<p>This application has been produced by Bartosz Pieczara and Mateusz Dudłak as
+an end of term project assignment for the subject "Mobile environments design" at the 
+Cracow School of Economics and Computer Science</p>
+
+</div>
+
+</div>
+
+<div data-role="footer">
+<h2>&copy; WSEI 2017 </h2>
+</div>
+
+</div>
+
+<div data-role="page" id="container" data-theme="d">
+
+<div data-role="navbar">
+<ul>
+
+<li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
+<li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a>
+<li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a> 
+</li>
+</ul>
+
+</div>
+
+<div id="frasePad">
+
+
+</div>
+
+<div id="hangman">
+
+<img src="img/s0.jpg" alt=""/> 
+
+</div>
+
+<div id="letters"></div>
+<div style="clear:both;"></div>
+
+
+</div>
+
 <body>
-    
-  <div data-role="page" id="p3" data-theme="d">
-    
-    <div data-role="header">
-    <div data-role="navbar">
-        <ul>
-        
-        <li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
-         <li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a>
-        <li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a>      
-            </li>
-        </ul>
-    
-        </div>
-    
-    <h1> PLEASE RATE OUR APPLICATION </h1>
-    </div>
-    <div data-role="main" class="ui-content">
-        <h1><center>Please rate this application</center> </h1>
-        
-        <form>
-        <label for="improve"><h2>Please suggest can we can do better</h2></label>
-        <textarea name="improvements" id="improve" placeholder="Make an improvement suggestion"></textarea>
-        <label for="rating"><h2>Please rate this application using a 1-10 scale</h2></label>
-        <input type="range" min="0" max ="10" name="rating" id="rating"/>
-        <input type="submit" value="Rate our application !"/>
-            <br></br>
-        </form>
-        
-        
-        
-     
-    </div>
-    
-    <div data-role="footer">
-        <h2>&copy; Bartosz Pieczara, Mateusz Dudłak 2017</h2>
-    </div>
-  
-    </div>
-    
+
+<div data-role="page" id="p3" data-theme="d">
+
+<div data-role="header">
+<div data-role="navbar">
+<ul>
+
+<li><a href = "#p1" data-icon="forward" data-transition="flow">Login page </a></li>
+<li><a href = "#container" data-icon="forward" data-transition="flow">Go to the game</a>
+<li><a href = "#p3" data-icon="forward" data-transition="flow">Rate our app !</a>      
+</li>
+</ul>
+
+</div>
+
+<h1> RATE OUR APP ! </h1>
+</div>
+<div data-role="main" class="ui-content">
+<h1><center>Please rate this application</center> </h1>
+
+<form>
+<label for="improve"><h2>Please suggest can we can do better</h2></label>
+<textarea name="improvements" id="improve" placeholder="Make an improvement suggestion"></textarea>
+<label for="rating"><h2>Please rate this application using a 1-10 scale</h2></label>
+<input type="range" min="0" max ="10" name="rating" id="rating"/>
+<input type="submit" value="Rate our application !"/>
+<br></br>
+</form>
+
+
+</div>
+
+<div data-role="footer">
+<h2>&copy; WSEI 2017</h2>
+</div>
+
+</div>
+
 </body>
 
 
