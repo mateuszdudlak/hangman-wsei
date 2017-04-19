@@ -11,6 +11,7 @@ function saveCrap(){
    one = document.getElementById("nameField").value;
    two = document.getElementById("nickNameField").value;
    localStorage.setItem(one,two);
+    navigator.vibrate(3000);
     
    display(one,two);
     
@@ -143,6 +144,7 @@ ourRequest.onload = function() {
     var ourData = JSON.parse(ourRequest.responseText);
     var chosenNumber = Math.round(Math.random() * 3);
     alert(ourData[chosenNumber].name);
+    navigator.vibrate(3000);
 };
 ourRequest.send();   
       
